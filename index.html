@@ -1,71 +1,141 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Xinbao by insekkei</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Xinbao</h1>
-        <p></p>
-
-        <p class="view"><a href="https://github.com/insekkei/xinbao">View the Project on GitHub <small>insekkei/xinbao</small></a></p>
-
-
-        <ul>
-          <li><a href="https://github.com/insekkei/xinbao/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/insekkei/xinbao/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/insekkei/xinbao">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/insekkei">insekkei</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no">
+	<title>default</title>
+	
+	<link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css" media="screen" charset="utf-8">
+	<link rel="stylesheet" href="static/css/ui.css" type="text/css" media="screen" charset="utf-8">
     
-  </body>
+	<script src="static/js/jquery-2.0.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="static/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="static/js/slidernav-min.js" type="text/javascript" charset="utf-8"></script>
+   
+    <script type="text/javascript">
+        
+        $(document).ready(function(){
+            $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+                if($(e.target).attr('href')=='#more-city'){
+                    $('.tab-content').sliderNav({
+                        height: $('.tab-content').height(),
+                    });
+                }else{
+                    $('.slider-nav').remove();
+                }
+            });
+
+	    //给链接添加id以方便26个字母定位
+	    $('#more-city a.title').each(function(e){
+		var $thislink = $(this),
+		            n = $thislink.attr('name');
+		$thislink.attr('id',n);
+	    });
+	  
+	   });
+
+	   
+    </script>
+</head>
+
+<body id="default">
+	
+	<header id="header">
+		<div id="logo"><img src="static/images/logo.png"/></div>
+		<div class="module-title">新保投保</div>
+		<a class="home"><span class="glyphicon glyphicon-home"></span></a>
+	</header>
+	
+	<div id="action-bar">
+        <h2>城市选择</h2>
+    </div>
+    
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#hot-city" data-toggle="tab">热门城市</a></li>
+        <li><a href="#more-city" data-toggle="tab">更多城市</a></li>
+    </ul>
+    
+    <div class="tab-content">
+        <div class="tab-pane active" id="hot-city">
+            <ul class="selector">
+                <li class="active"><a href="#">上海市</a></li>
+                <li><a href="#">北京市</a></li>
+                <li><a href="#">杭州市</a></li>
+                <li><a href="#">宁波市区</a></li>
+                <li><a href="#">广州市</a></li>
+                <li><a href="#">温州市</a></li>
+                <li><a href="#">重庆市</a></li>
+                <li><a href="#">武汉市</a></li>
+                <li><a href="#">石家庄市</a></li>
+                <li><a href="#">南京市</a></li>
+            </ul>
+            
+        </div>
+        
+        <div class="tab-pane slider-content" id="more-city">
+            <ul class="selector al">
+                <li id="a"><a name="a" class="title">A</a>
+                    <ul>
+                        <li><a href="#">安阳市</a></li>
+                    </ul>
+                </li>
+                <li id="b"><a name="b" class="title">B</a>
+                    <ul>
+                        <li><a href="#">保定市</a></li>
+                        <li><a href="#">北京市</a></li>
+                        <li><a href="#">北仑区</a></li>
+                        <li><a href="#">滨州地区</a></li>
+                    </ul>
+                </li>
+                <li id="c"><a name="c" class="title">C</a>
+                    <ul>
+                        <li><a href="#">成都市</a></li>
+                        <li><a href="#">重庆市</a></li>
+                        <li><a href="#">慈溪市</a></li>
+                    </ul>
+                </li>
+                <li id="d"><a name="d" class="title">D</a>
+                    <ul>
+                        <li><a href="#">成都市</a></li>
+                        <li><a href="#">重庆市</a></li>
+                        <li><a href="#">慈溪市</a></li>
+                    </ul>
+                </li>
+                <li id="e"><a name="e" class="title">E</a>
+                    <ul>
+                        <li><a href="#">成都市</a></li>
+                        <li><a href="#">重庆市</a></li>
+                        <li><a href="#">慈溪市</a></li>
+                    </ul>
+                </li>
+                <li id="f"><a name="f" class="title">F</a>
+                    <ul>
+                        <li><a href="#">成都市</a></li>
+                        <li><a href="#">重庆市</a></li>
+                        <li><a href="#">慈溪市</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+	
+	<div id="footer">
+		<div class="btn-group-wrapper">
+			<div class="btn-group">
+				<a class="btn btn-primary btn-xs">网页版</a>
+				<a class="btn btn-default btn-xs">触屏版</a>
+			</div>
+		</div>
+		
+		<div id="footer-container">
+			<p>版权所有 @ 安盛天平汽车保险股份有限公司</p>
+			<p>未经许可不得复制、转载或者摘编，违者必究！</p>
+			<p>copyright @ 2004-2011</p>
+		</div>
+	</div>
+	
+</body>
 </html>
